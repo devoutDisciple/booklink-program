@@ -1,0 +1,32 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image src="/images/LOGO.png"></image>
+    <text class="name"></text>
+
+  </view>
+</view>
+
+
+
+  <view class="cate-container">
+
+    <view class="category-title">
+      <text class="name">本周上架</text>
+      <view class="line_flag"></view>
+    </view>
+
+    <scroll-view scroll-x="true">
+      <view class="goods">
+        <block wx:for-items="{{goodsItems}}" wx:key="name">
+          <view class="goods-item" catchtap="catchTapCategory" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+            <image src="{{item.imageurl}}" class="goods-image" />
+            
+            <text>{{item.name}}</text>
+            <p>{{item.kjstate}}</p>
+            
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
