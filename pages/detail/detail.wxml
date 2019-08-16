@@ -1,0 +1,34 @@
+<!--pages/detail.wxml-->
+<view class='detail_view'>
+  <view class='detail_intro'>
+    <view class='detail_intro_img'>
+      <image src="{{detailData.url}}"></image>
+    </view>
+    <view class='detail_intro_book_name'>
+      {{detailData.name}}
+    </view>
+    <view class='detail_intro_book_auther'>
+      {{detailData.author}}
+    </view>
+    <view class='detail_intro_book_auther'>
+      {{detailData.price}}
+    </view>
+    <view class='detail_intro_book_detail'>
+       <view class='detail_intro_book_detail_title'>简介</view>
+       <view class='detail_intro_book_detail_content'>
+       <!-- {{detailData.desc}} -->
+        <text>{{detailData.desc}}</text>
+       </view>
+    </view>
+  </view>
+  <view class='detail_borrow'>
+    <button bindtap='showDialog' class="{{detailData.borrow ? '' : 'detail_borrow_no_yes'}}" disabled="{{detailData.borrow ? true : false}}">{{detailData.borrow ? "暂不可借阅" : "借阅"}}</button>
+  </view>
+  <!-- <view bindtap='closeDialog' class='dialog' wx:if="{{dialogVisible}}"> -->
+  <view class='dialog' wx:if="{{dialogVisible}}">
+    <!-- <image src="https://www.booklink.online/erweima.jpg"></image> -->
+    <image src="{{erweima}}" bindlongtap="viewImage" data-src="{{erweima}}" />
+    <view>长按保存图片扫码添加小助手</view>
+    <view>发送书名立即借书!</view>
+  </view>
+</view>

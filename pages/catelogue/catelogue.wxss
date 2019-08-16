@@ -4,28 +4,38 @@ page{
 }  
 /*总体主盒子*/  
 .container {  
-  position: relative;  
+  /* position: relative;  
   width: 100%;  
   height: 100%;  
-  background-color: #fff;  
-  color: #939393;  
+  background-color: #fff;   */
+  color: #939393;
+   position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
 }
  /*左侧栏主盒子*/  
 .nav_left{  
   /*设置行内块级元素（没使用定位）*/  
-  display: inline-block;  
-  width: 25%;  
+  display: flex;  
+  /* width: 25%;   */
+  flex: 1;
   height: 100%;  
   /*主盒子设置背景色为灰色*/  
   background: #f5f5f5;  
   text-align: center;  
+  flex-direction: column;
 }  
 /*左侧栏list的item*/  
 .nav_left .nav_left_items{  
   /*每个高30px*/  
   height: 40px;  
   /*垂直居中*/  
-  line-height: 40px;  
+  line-height: 40px;
+  width: 100%;  
   /*再设上下padding增加高度，总高42px*/  
   padding: 6px 0;  
   /*只设下边线*/  
@@ -42,30 +52,34 @@ page{
 /*右侧栏主盒子*/  
 .nav_right{  
   /*右侧盒子使用了绝对定位*/  
-  position: absolute;  
-  top: 0;  
-  right: 0;  
-  flex: 1;  
+  display: flex;  
+  /* top: 0;  
+  right: 0;   */
+  flex: 3;  
   /*宽度75%，高度占满，并使用百分比布局*/  
-  width: 75%;  
-  height: 2000px;  
+  /* width: 75%;   */
+  height: 100%;
+  overflow-y: auto;  
   padding: 10px;  
   box-sizing: border-box;  
   background: #fff;  
 }  
+.nav_right_content{
+  width: 100%;
+}
 /*右侧栏list的item*/  
 .nav_right .nav_right_items{  
   /*浮动向左*/  
   float: left;  
   /*每个item设置宽度是33.33%*/  
   width: 50%;  
-  height: 120px;  
+  height: 156px;  
   text-align: center;  
 }  
 .nav_right .nav_right_items image{  
   /*被图片设置宽高*/  
-  width: 60px;  
-  height: 60px;  
+  width: 72px;  
+  height: 97px;
   margin-top: 15px;  
 }  
 .nav_right .nav_right_items text{  
@@ -81,7 +95,9 @@ page{
 } 
 .nodata_text
 {
-  color: black;
+  color: #d2d2d2;
   font-size: 14px;  
-  text-align: center;  
+  text-align: center; 
+  width:100%;
+  line-height: 60vh;
 } 

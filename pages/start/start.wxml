@@ -3,7 +3,7 @@
     <image class="logo" src="/Images/BACKGROUND.jpg"></image>
     <view class="start-container">
         <view class='wrapper'>
-    <button class='wepay' bindtap='go'>探索书库</button>
-  </view>
+          <button class='wepay' bindtap='go'>探索书库</button>
+        </view>
     </view>
 </view>

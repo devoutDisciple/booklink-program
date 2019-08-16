@@ -6,11 +6,7 @@
 
   </view>
 </view>
-
-
-
   <view class="cate-container">
-
     <view class="category-title">
       <text class="name">本周上架</text>
       <view class="line_flag"></view>

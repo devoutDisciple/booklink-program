@@ -1,14 +1,19 @@
 {
   "pages": [
     "pages/start/start",
-    "pages/catelogue/catelogue"
+    "pages/catelogue/catelogue",
+    "pages/detail/detail"
   ],
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "书游 Book Link",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
-

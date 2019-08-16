@@ -1,0 +1,81 @@
+/* pages/detail.wxss */
+.detail_view{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.detail_intro{
+    flex: 1;
+    overflow-y: auto;
+}
+.detail_intro_img{
+  height:192px;
+  width: 100vw;
+  margin-top: 20px;
+  text-align: center;
+  /* background: red; */
+}
+.detail_intro_img image{
+  display: inline-block;
+    height:182px;
+    width: 135px;
+}
+.detail_intro_book_name{
+  margin-top: 10px;
+  font-size: 22px;
+  color: #333;
+}
+.detail_intro_book_auther{
+  color: #9e9e9e;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.detail_intro_book_detail{
+  text-align: left;
+  padding-bottom: 50px;
+  margin-top:40px;
+}
+.detail_intro_book_detail_title{
+    /* text-align: left; */
+    margin: 10px 20px;
+    font-size: 14px;
+    border-bottom:1px solid #eee;
+  padding-bottom:10px;
+}
+.detail_intro_book_detail_content{
+  word-break:break-all;
+  color: #9e9e9e;
+  font-size: 14px;
+  /* padding: 0 10px; */
+  margin: 0 20px;
+  text-indent: 20px;
+  line-height: 34px;
+}
+.detail_borrow{
+  height: 46px;
+  width: 100%;
+}
+.dialog{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background:#eee;
+  opacity: 0.96;
+  text-align: center;
+}
+.dialog image{
+  width: 200px;
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+.detail_borrow_no_yes{
+  background: #258105;
+  color: #fff;
+}
+/* <view class='detail_intro'></view>
+  <view class='detail_borrow'></view> */
